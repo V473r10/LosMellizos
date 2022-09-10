@@ -1,0 +1,33 @@
+
+@import "primeflex/primeflex.css";
+
+html, body {
+  background-color: var(--surface-b);
+  font-family: var(--font-family);
+}
+body {
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  text-align: center;
+  color: #fafafa;
+}
+
+.div-table {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 100px;
+}
+
+p-table{
+  width: 90vw;
+  border-radius: 100px;
+}
+
+p {
+ color: #fafafa;
+}
