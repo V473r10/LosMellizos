@@ -13,8 +13,8 @@ import { MenuComponent } from 'src/app/shared/menu/menu.component';
 
 export class LoginComponent implements OnInit {
 
-  @ViewChild('user') user!:ElementRef<HTMLInputElement>
-  @ViewChild('pass') pass!:ElementRef<HTMLInputElement>
+  user: string = '';
+  pass: string = '';
 
   loginData: Login = {user: '', pass: ''};
 
@@ -25,8 +25,8 @@ export class LoginComponent implements OnInit {
 
   login() {
 
-    this.loginData.user = this.user.nativeElement.value
-    this.loginData.pass = this.pass.nativeElement.value
+    this.loginData.user = this.user
+    this.loginData.pass = this.pass
 
     console.log(this.loginData);
 
@@ -34,7 +34,9 @@ export class LoginComponent implements OnInit {
     this.auth.login(this.loginData.user, this.loginData.pass).subscribe({
       next: (data) => {
         sessionStorage.setItem('IsAuth', data);
-        this.router.navigate(['/Example']);
+        console.log(data);
+        
+        this.router.navigate(['/Store']);
       }
     })
 

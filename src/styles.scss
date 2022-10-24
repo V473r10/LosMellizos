@@ -1,9 +1,12 @@
-
 @import "primeflex/primeflex.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-html, body {
+html,
+body {
   background-color: var(--surface-b);
-  font-family: var(--font-family);
+  // font-family: var(--font-family);
+  font-family: 'Montserrat', sans-serif !important;
+  background-color: #36536d;
 }
 body {
   font-family: var(--font-family);
@@ -23,11 +26,11 @@ h1 {
   border-radius: 100px;
 }
 
-p-table{
+p-table {
   width: 90vw;
   border-radius: 100px;
 }
 
 p {
- color: #fafafa;
+  color: #fafafa;
 }

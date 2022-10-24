@@ -9,6 +9,8 @@ export const environment = {
   // apiUrl: 'https://api.toto.com.uy:2556/LogisticAPITest/api/',
   // apiUrl: 'https://localhost:44361/api/',
 
+  api: 'https://localhost:7019/api/',
+
 };
 
 /*

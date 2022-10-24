@@ -36,7 +36,7 @@ export class MenuComponent implements OnInit {
   constructor(private router: Router) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
-        this.IsAuth = this.readSessionStorage('IsAuth') != null;
+        this.IsAuth = this.readSessionStorage('IsAuth') == 'true';
       }
     })
   }
@@ -47,6 +47,7 @@ export class MenuComponent implements OnInit {
 
   logout() {
     sessionStorage.removeItem('IsAuth');
+    this.IsAuth = false;
     this.router.navigate(['/']);
   }
 
@@ -63,9 +64,15 @@ export class MenuComponent implements OnInit {
         routerLink: ['/'],
       },
       {
-        label: 'Example',
-        routerLink: ['/Example'],
+        label: 'Tienda',
+        routerLink: ['/Store'],
       },
+      {
+        label: 'Cerrar sesión',
+        command: () => {
+          this.logout();
+        }
+      }
     ];
   }
 }

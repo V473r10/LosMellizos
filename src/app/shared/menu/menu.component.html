@@ -1,19 +1,11 @@
-<p-menubar *ngIf="IsAuth; else noAuth" [model]="itemsAuth">
+<p-menubar *ngIf="IsAuth" [model]="itemsAuth">
 
   <div class="div-flex">
-    <button pButton pRipple type="button" label="Cerrar sesión" class="p-button-danger cerrar-sesion" (click)="logout()"></button>
-    <img class="logo" src="../../../assets/images/TOTO.png" alt="">
+    <!-- <img class="logo" src="../../../assets/images/logo.png" alt=""> -->
+    <i class="pi pi-shopping-cart mr-2"></i>
   </div>
 
 </p-menubar>
-
-<ng-template #noAuth>
-  <p-menubar [model]="items">
-    <img class="logo" src="../../../assets/images/TOTO.png" alt="">
-
-  </p-menubar>
-
-</ng-template>
 
 
 
